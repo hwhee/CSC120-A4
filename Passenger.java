@@ -18,8 +18,9 @@ public class Passenger implements PassengerRequirements{
      */
     public void boardCar(Car c){
         boolean addSuccess = c.addPassenger(this);
-        if( ! addSuccess);
+        if( ! addSuccess){
             System.out.println("Error: this car is full or passenger was already onboard this car.");
+        }
     }
 
     /**

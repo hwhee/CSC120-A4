@@ -50,6 +50,7 @@ public class Engine implements EngineRequirements{
 
      /**
       * Determines whether there is enough fuel in the tank. If there is, subtracts 10. fuel, prints current fuel level and returns true if the current fuel level is above 0, false if not, if the fuel level is insufficient, prints error message and returns false
+      * @return boolean true if the engine has enough fuel, false if not
       */
      public Boolean go(){
         if (this.currentFuelLevel>10.){
@@ -57,12 +58,10 @@ public class Engine implements EngineRequirements{
             System.out.println("Current fuel level is:" + this.currentFuelLevel);
             if (this.currentFuelLevel>0){
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
-        }
-        else{
+        } else {
             System.out.println("Error: insufficient fuel level");
             return false;
         }

@@ -42,13 +42,11 @@ public class Car implements CarRequirements{
         if (passengersOnboard.size()<maxCapacity){
             if (passengersOnboard.contains(p)){
                 return false;
-            }
-            else {
+            } else {
                 passengersOnboard.add(p);
                 return true;
             }
-        }
-        else{
+        } else{
             return false;
         }
         
@@ -63,8 +61,7 @@ public class Car implements CarRequirements{
         if (passengersOnboard.contains(p)){
             passengersOnboard.remove(p);
             return true;
-        }
-        else {
+        } else {
             return false;
         }
 
@@ -76,14 +73,13 @@ public class Car implements CarRequirements{
     public void printManifest(){
         if (passengersOnboard.size() == 0){
             System.out.println("This car is EMPTY.");
-        }
-        else{
+        } else {
             String manifest = "";
             for (int i = 0; i<passengersOnboard.size(); i++){
                 manifest = manifest + (i+1) + ". " + passengersOnboard.get(i) +"\n";
             }
             System.out.println(manifest + "\n");
-              }
+        }
         
         }
 
